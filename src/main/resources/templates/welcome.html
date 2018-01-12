@@ -11,6 +11,33 @@
 
 <div>
 
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!">one</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">two</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">three</a></li>
+    </ul>
+
+    <nav>
+        <div class="nav-wrapper container"><a href="#" class="brand-logo">Logo</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a th:href="@{/malls}">Malls</a></li>
+                <li><a th:href="@{/stores}">Stores</a></li>
+                <li><a class="dropdown-button" href="#!" data-activates="dropdown1">
+                    <i class="material-icons right">arrow_drop_down_circle</i></a></li>
+            </ul>
+
+            <ul id="nav-mobile" class="side-nav">
+                <li><a th:href="@{/malls}">Malls</a></li>
+                <li><a th:href="@{/stores}">Stores</a></li>
+                <li><a class="dropdown-button" href="#!" data-activates="dropdown1">
+                    <i class="material-icons right">arrow_drop_down_circle</i></a></li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+
     <div>
         <h1>Spring Boot Web Thymeleaf Example</h1>
         <h2>
@@ -22,6 +49,11 @@
     </div>
 
 </div>
+
+<!--  Scripts-->
+<script th:src="@{//code.jquery.com/jquery-2.1.1.min.js}"></script>
+<script th:src="@{/js/materialize.js}"></script>
+<script th:src="@{/js/init.js}"></script>
 
 </body>
 </html>
